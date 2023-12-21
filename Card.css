@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root{
+    /* ### Primary */
+
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/* ### Neutral */
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--Cream);
+}
+.container{
+    background-color: var(--White);
+    width:500px;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+}
+.img-mobile{
+    display: none;
+}
+.container > .img-desktop{
+    width: 250px;
+    height: 400px;
+    border-radius: 10px 0px 0px 10px;
+}
+.para{
+    padding: 30px 20px;
+}
+.title{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--Dark-grayish-blue);
+}
+.text{
+    padding:  10px 0;
+    color: var(--Very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+}
+.des{
+    color: var(--Dark-grayish-blue);
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+.price{
+    padding: 20px 0;
+    font-family: 'Fraunces', serif;
+    color: var(--Dark-cyan);
+    font-size: 30px;
+}
+.price > s {
+    color: var(--Very-dark-blue);
+    font-size: 15px;
+    padding: 0px 0 0px 15px;
+    color: var(--Dark-grayish-blue);
+}
+button{
+    padding: 10px;
+    width: 210px;
+    align-items: center;
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+button:hover{
+    background-color: green;
+    cursor: pointer;
+    transform: translateY(5px);
+    box-shadow: 10px 10px 10px 5px var(--Dark-cyan);
+}
+@media screen and (max-width: 545px){
+    .container{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        height: 570px;
+    }
+    .img-desktop{
+        display: none;
+    }
+    .img-mobile{
+        display: flex;
+        border-radius: 10px 10px 0 0;
+    }
+    button{
+        width: 260px;
+    }
+}
